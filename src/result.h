@@ -1,8 +1,6 @@
 #ifndef RESULT_H
 #define RESULT_H
 
-#include <option_and_result.h>
-
 #include <functional>
 #include <string>
 
