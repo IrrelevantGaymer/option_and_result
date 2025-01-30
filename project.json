@@ -5,8 +5,6 @@
         "author": "Cora Maxwell",
         "description": "Provides Option and Result Monad Types and useful helper functions",
         "language": "cpp",
-        "version": "1.0.0",
-        "use-bundle": ["option_and_result"],
-        "repository": "https://github.com/IrrelevantGaymer/option_and_result"
+        "version": "1.0.0"
     }
 }
