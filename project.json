@@ -2,9 +2,10 @@
     "id": "option_and_result",
     "type": "package",
     "value": {
-        "author": "John Doe",
-        "description": "A middle out compression algorithm for project managers",
+        "author": "Cora Maxwell",
+        "description": "Provides Option and Result Monad Types and useful helper functions",
         "language": "cpp",
-        "version": "1.0.0"
+        "version": "1.0.0",
+        "use-bundle": ["option_and_result"]
     }
 }
