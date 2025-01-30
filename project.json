@@ -1,0 +1,10 @@
+{
+    "id": "option_and_result",
+    "type": "package",
+    "value": {
+        "author": "John Doe",
+        "description": "A middle out compression algorithm for project managers",
+        "language": "cpp",
+        "version": "1.0.0"
+    }
+}
