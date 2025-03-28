@@ -36,6 +36,8 @@ private:
     Result(T ok) : inner(ResultInner<T, E>(ok)), variant(ResultVariant::This) {}
     Result(E err) : inner(ResultInner<T, E>(err)), variant(ResultVariant::That) {}
 public:
+    ~Result() {}
+    
     static Result<T, E> Ok(T ok) noexcept {
         return Result<T, E>(ok);
     }
