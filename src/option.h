@@ -42,7 +42,11 @@ private:
     Option(T value) : variant(OptionVariant::Just), inner(OptionInner(value)) {}
 public:
     Option() : variant(OptionVariant::Nothing), inner(OptionInner(Unit<T> {})) {}
-    ~Option() {}
+    ~Option() {
+        if (this->variant == OptionVariant::Just) {
+            this->inner.~T();
+        }
+    }
 
     static Option<T> Some(T value) {
         return Option<T>(value);

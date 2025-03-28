@@ -36,7 +36,18 @@ private:
     Result(T ok) : inner(ResultInner<T, E>(ok)), variant(ResultVariant::This) {}
     Result(E err) : inner(ResultInner<T, E>(err)), variant(ResultVariant::That) {}
 public:
-    ~Result() {}
+    ~Result() {
+        switch (this->variant) {
+        case ResultVariant::This:
+            this->inner.ok.~T();
+            break;
+        case ResultVariant::That:
+            this->inner.err.~E();
+            break;
+        default:
+            std::__throw_invalid_argument("unreachable!");
+        }
+    }
     
     static Result<T, E> Ok(T ok) noexcept {
         return Result<T, E>(ok);
